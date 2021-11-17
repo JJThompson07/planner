@@ -1,0 +1,108 @@
+@import "variables";
+@import "layout";
+@import "cards";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--primary);
+}
+body {
+  background-color: var(--offwhite);
+}
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: var(--link);
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+  &:hover {
+    color: var(--link-dark)
+  }
+}
+
+// buttons
+button, .btn {
+  background-color: var(--green);
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  color: whitesmoke;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+  &:hover {
+    background-color: var(--green-dark);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    color: var(--primary);
+    background-color: var(--primary-light);
+    cursor: not-allowed;
+  }
+
+  &-blue {
+    background-color: var(--blue);
+    &:hover {
+      background-color: var(--blue-dark);
+    }
+  }
+  &-primary {
+    background-color: var(--primary);
+    &:hover {
+      background-color: var(--primary-dark);
+    }
+  }
+  &-copper {
+    background-color: var(--copper);
+    &:hover {
+      background-color: var(--copper-dark);
+    }
+  }
+
+  &.router-link-active {
+    background-color: var(--green-light);
+    color: var(--offblack);
+  }
+}
+
+// forms
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 3px rgba(50,50,50,0.05);
+  border: 1px solid var(--copper-dark);
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  gap: 1.25rem;
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+input, textarea {
+  border: 0;
+  border-bottom: 1px solid var(--copper-dark);
+  padding: 0.5rem;
+  outline: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+// error
+.error {
+  color: var(--warning);
+  margin: 1rem 0;
+  font-size: 14px;
+}
